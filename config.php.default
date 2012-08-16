@@ -1,0 +1,17 @@
+<?php
+class Configure {
+	private static $data = array();
+
+	public static function write($key, $value) {
+		self::$data[$key] = $value;
+	}
+
+	public static function read($key) {
+		return isset(self::$data[$key]) ? self::$data[$key] : null;
+	}
+}
+
+Configure::write('Foursquare.ClientId', '');
+Configure::write('Foursquare.ClientSecret', '');
+Configure::write('Foursquare.RedirectUrl', '');
+Configure::write('Foursquare.ApiVersionDate', '20120511');
